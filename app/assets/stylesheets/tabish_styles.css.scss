@@ -1,4 +1,22 @@
+// dependencies______________________________________
 @import "bootstrap-sprockets";
 @import "bootstrap";
-// _________________________________________________
 
+
+
+
+// welcome page ______________________________________
+#sidebar{
+  width:400px;
+  height:100vh;
+  border: 1px solid black;
+}
+
+.next2you4ever{
+  display:inline-block;
+}
+
+
+.center{
+  text-align: center;
+}
