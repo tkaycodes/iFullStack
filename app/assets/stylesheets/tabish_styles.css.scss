@@ -8,7 +8,7 @@
 
 
 
-#sidebar{
+.sidebar{
   width:600px;
   height:100vh;
   position:absolute;
@@ -16,10 +16,21 @@
   color:white;
   right:-600px;
   top:0px;
+  transition: right 0.3s;
  }
 
-#mainpage{
-   // margin-right: 600px;
-}
 
 
+  .sidebarover{
+    right:0px;
+    }
+
+     .mainpage{
+    transition: right 0.3s;
+ }
+
+
+  .mainpageover{
+    margin-right: 600px;
+
+  }

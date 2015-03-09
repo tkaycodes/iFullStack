@@ -14,3 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function() {
+  $('#sidebaricon').click(function(){
+    $(".mainpage").toggleClass('mainpageover');
+    $(".sidebar").toggleClass('sidebarover');
+     return false;
+  });
+
+  $(".mainpage").click(function(){
+    $(".mainpage").removeClass('mainpageover');
+    $(".sidebar").removeClass('sidebarover');
+  });
+
+});
