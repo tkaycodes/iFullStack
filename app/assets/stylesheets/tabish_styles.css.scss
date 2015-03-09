@@ -7,16 +7,24 @@
 
 // welcome page ______________________________________
 #sidebar{
-  width:400px;
+  width:500px;
   height:100vh;
-  border: 1px solid black;
+  position:absolute;
+  background-color: black;
+  color:white;
+  right:-600px;
+  top:0px;
+ }
+ 
+#sidebaricon{
+  font-size: 45px;
+  color:white;
+  position:absolute;
+  top:0;
+  right:10px;
+  height:45px;
+  width:45px;
 }
-
-.next2you4ever{
-  display:inline-block;
-}
-
-
-.center{
+ .center{
   text-align: center;
-}
+   }
