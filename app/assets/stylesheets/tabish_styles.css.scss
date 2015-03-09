@@ -2,12 +2,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.center{
+  text-align: center;
+  }
 
 
 
-// welcome page ______________________________________
 #sidebar{
-  width:500px;
+  width:600px;
   height:100vh;
   position:absolute;
   background-color: black;
@@ -15,16 +17,9 @@
   right:-600px;
   top:0px;
  }
- 
-#sidebaricon{
-  font-size: 45px;
-  color:white;
-  position:absolute;
-  top:0;
-  right:10px;
-  height:45px;
-  width:45px;
+
+#mainpage{
+   // margin-right: 600px;
 }
- .center{
-  text-align: center;
-   }
+
+

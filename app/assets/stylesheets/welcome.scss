@@ -1,7 +1,4 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
+//welcome page___________________________________________
 
 body{
     background: {
@@ -12,8 +9,17 @@ body{
  #mainheader{
   color:white;
   font-size: 200px;
-  width:100vw;
-  height: 100vh;
-  margin-top:15%;
+  width:1500px;
+  height:250px;
+  position:absolute;
+  margin:auto;
+  top: 0; left: 0; bottom: 0; right: 0;
  }
 
+#sidebaricon{
+  font-size: 45px;
+  color:white;
+  float:right;
+  margin-right: 10px;
+
+}
