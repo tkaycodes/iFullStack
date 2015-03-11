@@ -1,6 +1,7 @@
 // dependencies______________________________________
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 .center{
   text-align: center;
@@ -10,7 +11,7 @@
   width:500px;
   height:100vh;
   position:absolute;
-  background-color: black;
+  background:  #141F3D;
   color:white;
   // left:-600px;
   left:-500px;
@@ -21,9 +22,21 @@
 
 
 .color{
-  background-color: blue;
+  background-color: black;
   width:100vw;
   height:100vh;
+}
+
+.top{
+  height:300px;
+  background-image:url('blue.jpg');
+  color:white;
+  font-size:100px;
+
+}
+
+.link{
+  cursor:pointer;
 }
   .sidebarover{
     left:0px;
@@ -37,4 +50,31 @@
   .wrapperover{
     margin-left: 500px;
 
+  }
+
+  .backgroundhover{
+    background-color: yellow;
+  }
+
+  #myname{
+    font-size:150px;
+    // font-weight:700;
+    font-family: 'Lobster', cursive;
+
+  }
+
+  #mycompany{
+    margin-top:px;
+    font-size:50px;
+  }
+
+  li{
+    text-decoration: none;
+    list-style: none;
+    padding: 40px 20px 40px 20px;
+    border-bottom: 1px solid gray;
+  }
+
+  ul{
+    padding-left: 0px;
   }
