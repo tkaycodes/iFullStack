@@ -18,13 +18,13 @@
 
 $(document).ready(function() {
   $('#sidebaricon').click(function(){
-    $(".mainpage").toggleClass('mainpageover');
+    $(".wrapper").toggleClass('wrapperover');
     $(".sidebar").toggleClass('sidebarover');
      return false;
   });
 
   $(".mainpage").click(function(){
-    $(".mainpage").removeClass('mainpageover');
+    $(".wrapper").removeClass('wrapperover');
     $(".sidebar").removeClass('sidebarover');
   });
 

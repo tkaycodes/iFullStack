@@ -1,26 +1,28 @@
 //welcome page___________________________________________
 
-body{
-    background: {
-    image: asset_url('blue.jpg');
-    }
-}
+// body{
+//     background: {
+//     image: asset_url('blue.jpg');
+//     }
+// }
 
  #mainheader{
   color:white;
   font-size: 200px;
+  font-weight:900;
   width:1500px;
   height:250px;
   position:absolute;
   margin:auto;
   top: 0; left: 0; bottom: 0; right: 0;
+  border: 1px, solid, white;
   
  }
 
 #sidebaricon{
   font-size: 45px;
-  color:white;
-  float:right;
+  // color:white;
+  // float:right;
   margin-right: 10px;
   cursor: pointer;
 
