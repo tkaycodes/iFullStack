@@ -9,7 +9,7 @@
 
 .sidebar{
   width:500px;
-  height:100vh;
+  height:100%;
   position:absolute;
   background:  #141F3D;
   color:white;
@@ -24,14 +24,37 @@
 
 }
 
+.padme{
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px
+}
+
+.middleme{
+  margin-top: 6%;
+}
+
+.logos{
+  background-color: white;
+}
+.logosizeone{
+height:300px;
+width:300px;
+}
+
 .color{
   background-color: black;
   width:100vw;
   height:100vh;
 }
 
+.changecolor{
+  background-color: white;
+}
+
 .top{
-  height:300px;
+  height:400px;
   background-image:url('blue.jpg');
   color:white;
   font-size:100px;
@@ -69,6 +92,8 @@
   #mycompany{
     bottom:30px;
     font-size:50px;
+    color:white;
+    background-color: #141F3D;
   }
 
   li{
@@ -80,4 +105,19 @@
 
   ul{
     padding-left: 0px;
+  }
+
+  .skills{
+    background-color: #141F3D;
+    width:100%;
+    height:300px;
+    color:white;
+  }
+
+  .skillheader{
+font-size:40px;
+  }
+
+  .skillnote{
+font-size:20px;
   }
