@@ -8,7 +8,7 @@
 
 
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 
 }
  #mainheader{
@@ -34,3 +34,10 @@ body{
   width: 100%;
   padding-left: 15px;
 }
+
+
+
+.hideme{
+  visibility: hidden;
+}
+

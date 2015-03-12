@@ -28,4 +28,12 @@ $(document).ready(function() {
     $(".sidebar").removeClass('sidebarover');
   });
 
+
+  $('.fa-pencil').click(function(){
+     $(".wrapper").removeClass('wrapperover');
+    $(".sidebar").removeClass('sidebarover');
+$('.logos').toggleClass('hideme');
+$('.logos').toggleClass('changecolor');
+});
+
 });
