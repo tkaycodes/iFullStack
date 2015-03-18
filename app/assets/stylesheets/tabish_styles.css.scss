@@ -187,11 +187,23 @@ height:200px;
   #contact{
   padding-top:20px;
   padding-bottom:20px; 
+  font-size:15px;
  }
 
  .resumesubheader{
   font-size:20px;
   border: 1px solid black;
-  width:150px;
+  // width:150px;
 }
+
+.resumesectionbody{
+  text-align: justify;
+  padding-bottom: 0px;
+}
+
+.projects{
+  text-align: justify;
+}
+
+
 
