@@ -94,6 +94,10 @@ width:300px;
     font-size:50px;
     color:white;
     background-color: #141F3D;
+    float:right;
+    font-family: 'Lobster', cursive;
+    font-size:40px;
+    margin-right: 10px;
   }
 
   li{
@@ -193,6 +197,7 @@ height:200px;
  .resumesubheader{
   font-size:20px;
   border: 1px solid black;
+  padding-left: 5px;
   // width:150px;
 }
 
@@ -208,6 +213,11 @@ height:200px;
 .references{
   font-size:12px;
   margin-top:15px;
+}
+
+#myposition{
+  font-size: 30px;
+  font-family: arial;
 }
 
 
