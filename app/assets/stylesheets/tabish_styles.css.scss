@@ -36,7 +36,7 @@
 }
 
 .logos{
-  background-color: white;
+  background-color: black;
 }
 .logosizeone{
 height:300px;
@@ -82,12 +82,12 @@ width:300px;
     background-color: yellow;
   }
 
-  #myname{
+  .myname{
     font-size:150px;
     // font-weight:700;
     // font-family: 'Lobster', cursive;
     background-color: white;
-    color:black;
+    color:#141F3D;
 
   }
 
@@ -154,6 +154,15 @@ height:200px;
     cursor: pointer;
   }
 
+
+.contactchange{
+background-color: black;
+}
+
+.namechange{
+  color:white;
+  background-color: black;
+}
 
 
 
@@ -222,4 +231,6 @@ height:200px;
   font-family: arial;
 }
 
-
+.contactme{
+  background-color: white;
+}

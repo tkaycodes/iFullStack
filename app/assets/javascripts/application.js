@@ -34,6 +34,8 @@ $(document).ready(function() {
     $(".sidebar").removeClass('sidebarover');
 $('.logos').toggleClass('hideme');
 $('.logos').toggleClass('changecolor');
+$('.contactme').toggleClass('contactchange');
+$('.myname').toggleClass('namechange');
 });
 
 });
