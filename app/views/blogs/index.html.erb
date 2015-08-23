@@ -1,26 +1,42 @@
-<div class="container" color:"#141F3D">
-  <div class="header" style="text-align:center">
-    <h1>Blogs</h1><hr>
-  </div>
-  <div class="actualblog">
-  <%@blogs.order("created_at DESC").each do |x|%>
-    <div id="allblogs col-sm-4">
+<!-- header -->
+<div class="header" style="text-align:center;height:300px;background-color:black;color:white;padding-top:75px;">
+  <span style="font-size:60px;vertical-align:middle;border:2px solid white;letter-spacing:5px;padding-left:10px;padding-right:10px;padding-bottom:5px;font-weight:100">Blog</span>
+</div><br>
 
+
+<!-- surrounds all blogposts -->
+<div class="container">
+
+
+  <div class="allblogs">
+      <%@blogs.order("created_at DESC").each do |x|%>
         <%=link_to x, :style=>'text-decoration:none' do%>
-
             <div id="blog">
-              <%=x.created_at.strftime("%a, %B %d %Y")%>
-                <h1><%=x.title%></h1>
-                <h4><%=x.sub_heading%></h4>
+             <!-- individual blogpost -->
+             <div class="blog_main" style="margin-bottom:20px;">
+                <%=x.created_at.strftime("%a, %B %d %Y")%>
+                <h1 style="font-weight:100"><%=x.title%></h1>
+                <h4 style="font-weight:100"><%=x.sub_heading%></h4>
                 <div style="text-align:justify">
-                  <%=truncate(simple_format(x.body), length:200, escape:false)%>
+                <%=truncate(simple_format(x.body), length:200, escape:false)%>
                 </div>
-            </div> <hr>
-
+              </div>
         <%end%>
-
-    </div>
-  <%end%>
+        <!-- ending the link block before blog tag div -->
+              <div class="blog_tags">
+                  <!-- tags for each individual post -->
+                  <%x.tags.each do |x|%>
+                    <span style="background-color:#CCE0ED;padding:2px 2px 2px 2px;color:gray;font-size:12px;"><%=x.name%>
+                    </span>
+                  <%end%>
+              </div>
+            </div><hr>
+            <!-- /individual blogpost -->
+      <%end%>
   </div>
+  <!-- /allblogs -->
 
 </div>
+<!-- /container -->
+
+
