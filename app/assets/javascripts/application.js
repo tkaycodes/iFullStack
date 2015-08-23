@@ -15,8 +15,11 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('ready page:load', function(){
+//stackoverflow.com/questions/18770517/rails-4-how-to-use-document-ready-with-turbo-links
 
-$(document).ready(function() {
+
+// $(document).ready(function() {
   $('#sidebaricon').click(function(){
     $(".wrapper").toggleClass('wrapperover');
     $(".sidebar").toggleClass('sidebarover');
