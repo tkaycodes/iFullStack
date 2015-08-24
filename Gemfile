@@ -11,20 +11,21 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0' # Build JSON APIs with ease. 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
-
-
-
 gem 'bootstrap-sass', '~> 3.3.3'
 gem "font-awesome-rails"
-gem 'rails_12factor', group: :production
 gem 'faker'
+gem 'hirb'
 
 
+group :production do 
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'byebug'  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 

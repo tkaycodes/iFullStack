@@ -17,24 +17,32 @@
                 <%=x.created_at.strftime("%a, %B %d %Y")%>
                 <h1 style="font-weight:100"><%=x.title%></h1>
                 <h4 style="font-weight:100"><%=x.sub_heading%></h4>
-                <div style="text-align:justify">
+                <div class="blog_post_body">
                 <%=truncate(simple_format(x.body), length:200, escape:false)%>
                 </div>
               </div>
         <%end%>
-        <!-- ending the link block before blog tag div -->
+        <!-- ending the link block (for post_path) before tag div -->
               <div class="blog_tags">
                   <!-- tags for each individual post -->
                   <%x.tags.each do |x|%>
-                    <span style="background-color:#CCE0ED;padding:2px 2px 2px 2px;color:gray;font-size:12px;"><%=x.name%>
+                    <span style="background-color:#CCE0ED;padding:2px 2px 2px 2px;color:gray;font-size:12px;margin:0px 5px 0px 0px;">
+                      <%#=link_to x.name, filter_path%>
+                      <%=link_to x.name, filter_path(tagid: x.id)%>
                     </span>
                   <%end%>
               </div>
             </div><hr>
             <!-- /individual blogpost -->
       <%end%>
+       <%if params[:tagid].present?%>
+          <span style="padding-bottom:30px;"><%=link_to "Back", blogs_path%></span>
+      <%end%>
   </div>
   <!-- /allblogs -->
+
+
+ 
 
 </div>
 <!-- /container -->

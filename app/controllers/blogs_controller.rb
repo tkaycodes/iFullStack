@@ -1,6 +1,10 @@
 class BlogsController < ApplicationController
   def index
-    @blogs = Blog.all
+    if params[:tagid].present?
+      @blogs=Blog.all.where(id:21);
+    else
+      @blogs = Blog.all
+    end
   end
 
   def show
