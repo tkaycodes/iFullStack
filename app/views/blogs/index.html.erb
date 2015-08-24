@@ -15,8 +15,10 @@
              <!-- individual blogpost -->
              <div class="blog_main" style="margin-bottom:20px;">
                 <%=x.created_at.strftime("%a, %B %d %Y")%>
+                <div class="headingandsubheading">
                 <h1 style="font-weight:100"><%=x.title%></h1>
                 <h4 style="font-weight:100"><%=x.sub_heading%></h4>
+                </div>
                 <div class="blog_post_body">
                 <%=truncate(simple_format(x.body), length:200, escape:false)%>
                 </div>
