@@ -11,7 +11,11 @@
       </div>
       <div style="font-weight:200"><%=@blog.created_at.strftime("%a %B %d %Y")%></div><br><br><br>
       <div class="blog_post_body">
-        <%=simple_format(@blog.body)%>
+        <%#=simple_format(@blog.body)%>
+        <%#=simple_format(@blog.body, {}, :sanitize => false)%>
+        <%#=Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, fenced_code_blocks: true).render("fasj;sjlf;sajkfl;sjafl; saf1 ```<h1> safasfsa</h1> \<\%\= fsf \%\>``` fldskajflasf ").html_safe%>
+        <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, fenced_code_blocks: true).render(@blog.body).html_safe%>
+        <%#=markdown.render("hello")%>
       </div>
       <%=link_to "Back", blogs_path%>
       <hr>

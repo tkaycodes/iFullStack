@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem "font-awesome-rails"
 gem 'faker'
 gem 'hirb'
+gem 'redcarpet'
 
 
 group :production do 
