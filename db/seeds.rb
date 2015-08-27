@@ -61,59 +61,66 @@ Blog.create(title: "Hello World", sub_heading: "Giving Back - or at least an att
 
 Blog.create(title:"Implementing Real-Time Search with Ruby-on-Rails", sub_heading: "PART 1 - Setup ('Scaffold + Faker + Bootstrap')", body:"<h3>Intro</h3>
 
-So you generated a new rails scaffold. Now what ? Apart from the basic CRUD funcionality - it seems a bit bare. Lets make it a little more exciting !
+So you generated a new rails scaffold. Now what ? Apart from the basic CRUD functionality - it seems a bit bare. Lets make it a little more exciting !
 
-In this tutorial, I want to walk you through the steps I took to add real time search functionarlity in my applicaiton using Ruby on Rails 4, with the help of Jquery and AJAX. I had previously made something similar following a tutorial online using <a href=\"http://facebook.github.io/react/\">React</a>. An example of this functionarlity can be seen <a href=\"http://tutorialzine.com/2014/07/5-practical-examples-for-learning-facebooks-react-framework/\">here</a> (Just scroll down to 3.Real Time Search). Another example doing the same thing using Angular JS can be seen <a href=\"http://tutorialzine.com/2013/08/learn-angularjs-5-examples/#4-instant-search\">here</a>. In both cases, front end javascript frameworks were used - I wanted to stick to Rails and see if I could get it to work, and it worked !
-You can view the live demo <a href=\"http://rails-real-time-search.herokuapp.com/\">here</a>. All the code can be viewed <a href=\"https://github.com/tkhan003/Realtime-Search-Rails\">here</a>
-<p>
-You can just play around with the code and add this to your own app(s), or keep reading for a play-by-play and start from scratch. I will also be walking through the process of using faker to generate fake data, and adding bootstrap to make your resutl look prettier. You can skip these sections if you want.
-</p>
+In this tutorial, I want to walk you through the steps I took to add a 'real time search' in my applicaiton using Ruby on Rails 4, with the help of jQuery and AJAX. I had previously made something similar following a tutorial online, using <a href=\"http://facebook.github.io/react/\">React</a>. 
+<a href=\"http://tutorialzine.com/2014/07/5-practical-examples-for-learning-facebooks-react-framework/\">Heres what this looks like using REACT JS</a> - scroll to '3.Real Time Search'. The Angular JS version of this same thing can be viewed <a href=\"http://tutorialzine.com/2013/08/learn-angularjs-5-examples/#4-instant-search\">here</a>. 
+
+
+Now, here is a <a href=\"http://rails-real-time-search.herokuapp.com/\">live demo</a> of the version we will be making using only Ruby-on-Rails, with the help of a little jQuery. View all the source code <a href=\"https://github.com/tkhan003/Realtime-Search-Rails\">here</a>
+
+Enough talking, lets get to it!
+
+Oh, one more thing - The first part below will be pretty basic stuff, helping to get everything setup, you can skip all this stuff and go ahead to the next section <a href=\"/blogs/85\">here</a> if you want.
 
 <h3> Create New Project / Generate Scaffold </h3>
-1. Assuming you have Rails working on your machine, go ahead and create a new rails project and run the rails scaffold command - Im going to be creating a books scaffold for the purpose of this tutorial:
 
-```
-    rails new realtime-search
-    rails g scaffold: books name:string body:text 
-```
+Assuming you have Rails working on your machine, go ahead and create a new rails project and run the rails scaffold command - Im going to be creating a books scaffold for the purpose of this tutorial:
 
-Once this is done, go ahead and run the create db, and migrate db commands, and go ahead and fire up your rails server !
+<code>
+$ rails new realtime-search<br>
+$ rails g scaffold: books name:string body:text 
+</code>
 
-```
-    $ rake db:create
-    $ rake db:migrate
-    $ rails server
-```
 
-Once your up and running, head over to your routes.rb file, and set the root path (based on the scaffold you generated - or books if you are following along):
+Once this is done, go ahead and run the following commands, to create and migrate your database, and fire up your rails server!
 
-```
-    #/config/routes.rb
+<code>
+$ rake db:create<br>
+$ rake db:migrate<br>
+$ rails server
+</code>
+
+Once your up and running, open up your newly created rails application and head over to your routes.rb file. Inside, set your root path (based on the scaffold you generated - or use 'books' if you are following along):
+
+```ruby
+    # /config/routes.rb
     
     root \"books#index\"
 ```
 
 
-<h3>Optional: Use Faker to gnerate bogus (and funny) data </h3>
-Use <a href=\"https://github.com/stympy/faker\">faker </a> gem to add a bunch of data. If you dont know what faker it, it is one of my favoute gems, it will generate all kinds of bogus data, which is a) fun and a lot of times you get funny results which is always good, and b) useful for when you need to test out your applications with lots of data and you dont have the creative capacity or will to power your way through generating 20 unique addresses. 
+<h3>Optional Step: Use 'Faker' gem to generate fake data to work with </h3>
+Let use the <a href=\"https://github.com/stympy/faker\">faker </a> gem to add a bunch of fake data that we can work with. If you arent familiar with this gem, it just generates all kinds of random data that you can work with. This is one of my favourite gems, and I encourage you to use it in your future projects! 
 
 Anyways, head over to your gem file add add faker 
 
 ```
-    #/Gemfile
+    # /Gemfile
 
     gem 'faker'
 ```
 
-then go ahead and run bundle install
+then go ahead and run the bundle install command
 
-```
-    $ bundle install
-```
+<code>
+$ bundle install
+</code>
 
-If you are running your server, you'll need to stop it here (mac - control +c ) and re-run it so itll load up the gem you just installed.
+If your server is still running, you'll need to stop it here (on mac - control +c ) and re-start it so itll load up and start utilizing the gem you just installed.
 
-Now, go to your seeds.rb file to fill up your database with some book data.
+
+Now, lets go to the seeds.rb file to fill up our database with some book data using this gem.
 
 ```
     # /db/seeds.rb
@@ -123,60 +130,56 @@ Now, go to your seeds.rb file to fill up your database with some book data.
     end
 ```
 
-After this, you need to run the following command:
-```
-    $ rake db:seed
-```
+This will generate 20 fake books for us. After this, you need to run the following command to actually seed your database:
 
-This will load up any code you have in your seeds.rb file, and add it to your database.
+<code>
+$ rake db:seed
+</code>
 
-<p>
-Now run your server again, you should have a 20 books created for you. Maybe you got even a good laugh from some of the titles that were genrated - gotta love faker! 
-</p>
 
-<h3>Optional - adding <a href=\"http://getbootstrap.com/\">bootstrap</a></h3> 
+In your application, you should have a 20 books created for you. Maybe youll even get a good laugh (or two) from some of the stuff that was genrated - gotta love faker! 
 
-Now, lets make our application look a little more pretty using bootstrap! Again, this part is optional - if your just here for the search, keep scrolling !
 
-Lets add the bootstrap-rails <a href=\"https://github.com/seyhunak/twitter-bootstrap-rails\">gem</a>
+<h3>Another Optional step - Adding <a href=\"http://getbootstrap.com/\">Bootstrap</a></h3> 
 
-in your gemfile add
+Lets make our application look a little more pretty using bootstrap! Again, this part is optional - if your just here for the search, just move on to the next section.
+
+Lets add the 'twitter-bootstrap-rails' <a href=\"https://github.com/seyhunak/twitter-bootstrap-rails\">gem</a>
+
+In your gemfile add:
 
 ```
     #/Gemfile
     
     gem \"twitter-bootstrap-rails\"
 ```
+then run:
 
-then, run bunndle install
+<code>
+$ bundle install
+</code>
 
-```
-   $ bundle install
-```
+After this, following  <a href=\"https://github.com/seyhunak/twitter-bootstrap-rails\"> gem installation instructions</a>, run the genrator command:  
 
-after this, following the <a href=\"https://github.com/seyhunak/twitter-bootstrap-rails\"> gem installation instructions</a>, run the genrator  
-
-```
+<code>
 $ rails generate bootstrap:install static
+</code>
 
-```
 
-Make sure to stop your server (control+c on mac) and re-start it again, and you should now have bootstrap integrated
+Again, make sure to stop your server (control+c on mac) and re-start it again. You should now have bootstrap integrated into your project
+
 
 Now lets get to coding!
 
-Inside your index.html.erb file, which should already contain about 30 lines of code (genrated by rails scaffold ) lets wrap eveything in a div with a class of container, this is a bootstrap class - it will put margins on the side of our book list and make everything more centered.
+Inside your index.html.erb file, which should already contain about 30 lines of code (genrated by rails scaffold ) lets wrap eveything within a div having a class of container. This is a bootstrap class - which will put margins on the side of our book list and make everything more centered.
 
-Also add the bootstrap classes table, table-bordered, and table-striped to your table tag. table-bordered and table-striped are optional - but I personally like the way they make my tables look, but you dont have to add them if you like the look without. 
+Also add the bootstrap classes 'table', 'table-bordered', and 'table-striped' to your html table tag. 'table-bordered' and 'table-striped' are optional - but I personally like the way they make my tables look, but you dont have to add them if you like the look without. Play around with them, and pick a combination you like!
 
-Your index.html.erb file should now look something like <a href= https://gist.github.com/tkhan003/942405c61d4f5693911a>this.    
-</a>
-            
-Now that we have our scaffold looking nicer, and have test data we can work with, lets implement the search!
-  
-
+Your index file should look something like this:
 
 ```
+
+# /views/books/index.html.erb
 
 <div class=\"container\">
 <p id=\"notice\">\<\%\= notice \%\></p>
@@ -200,7 +203,8 @@ Now that we have our scaffold looking nicer, and have test data we can work with
           <td><%= book.body %></td>
           <td><%= link_to 'Show', book %></td>
           <td><%= link_to 'Edit', edit_book_path(book) %></td>
-          <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', book, method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -210,16 +214,25 @@ Now that we have our scaffold looking nicer, and have test data we can work with
 
 ```
 
+Also you should have this
 
-            
-<p>
-Note:
-If anything is unclear, or you have any suggestions, corrections, or any comments in general - please leave a comment below
-</p>
+
+            <img src=\"/assets/id_added.png\" />
+
+Now that we have our scaffold looking nicer, and have test data we can work with, lets get to the fun stuff, and <a href=\"/blogs/85\">implement the search!</a>
+           
+<hr>
+If you have any questions, comments, or see any errors - please dont hesitate to leave a comment below!
 
 
 
 ")
+
+Blog.create(title:"image text23", body: "sdfafsafsjf;afjf
+
+<img src=\"/assets/html.png\" />
+
+  ")
 
 # #third post
 
