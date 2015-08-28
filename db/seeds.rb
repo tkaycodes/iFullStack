@@ -70,7 +70,7 @@ Now, here is a <a href=\"http://rails-real-time-search.herokuapp.com/\">live dem
 
 Enough talking, lets get to it!
 
-Oh, one more thing - The first part below will be pretty basic stuff, helping to get everything setup, you can skip all this stuff and go ahead to the next section <a href=\"/blogs/3\">here</a> if you want.
+Oh, one more thing - The first part below will be pretty basic stuff, helping to get everything setup, you can skip all this stuff and go ahead to the next section <a href=\"/blogs/6\">here</a> if you want.
 
 <h3> Create New Project / Generate Scaffold </h3>
 
@@ -213,7 +213,7 @@ Your index file should look something like this:
 
 ```
 
-Now that we have our scaffold looking nicer, and have test data we can work with, lets get to the fun stuff, and <a href=\"/blogs/3\">implement the search!</a>
+Now that we have our scaffold looking nicer, and have test data we can work with, lets get to the fun stuff, and <a href=\"/blogs/6\">implement the search!</a>
            
 <hr>
 If you have any questions, comments, or see any errors - please dont hesitate to leave a comment below!

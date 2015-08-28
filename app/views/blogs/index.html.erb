@@ -19,9 +19,9 @@
                 <h1 style="font-weight:100"><%=x.title%></h1>
                 <h4 style="font-weight:100"><%=x.sub_heading%></h4>
                 </div>
-                <div class="blog_post_body">
-                <%=truncate(simple_format(x.body), length:200, escape:false)%>
-                </div>
+                <!-- <div class="blog_post_body"> -->
+                <%#=truncate(simple_format(x.body), length:200, escape:false)%>
+                <!-- </div> -->
               </div>
         <%end%>
         <!-- ending the link block (for post_path) before tag div -->
