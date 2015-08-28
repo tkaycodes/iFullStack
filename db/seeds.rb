@@ -236,11 +236,22 @@
 # Blog.create(title:"Implementing Real-Time Search with Ruby-on-Rails", sub_heading: "PART 2 - Search ", body:" ");
 
 
-@tag1=Tag.create(name: "General");
-@tag2=Tag.create(name: "Ruby-on-Rails");
-@tag3=Tag.create(name: "Tutorial");
-@tag4=Tag.create(name: "Programming");
-@tag5=Tag.create(name: "jQuery");
+# genereal
+@tag1=Tag.find_by(name:"General")
+
+# ror
+@tag2=Tag.find_by(name:"Ruby-on-Rails");
+
+# tutorial
+@tag3=Tag.find_by(name:"Tutorial");
+
+# programming
+@tag4=Tag.find_by(name:"Programming");
+
+#jQuery
+@tag5=Tag.find_by(name:"jQuery");
+
+
 
 
 @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag1.id, blog_id:1)
