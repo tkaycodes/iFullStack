@@ -6,8 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-case Rails.env
-  when "development"
+
 #     # Faker data
 
 #     # create 20 blogs
@@ -224,7 +223,7 @@ If you have any questions, comments, or see any errors - please dont hesitate to
 
 Blog.create(title:"Implementing Real-Time Search with Ruby-on-Rails", sub_heading: "PART 2-Implementing the Search", body: "Stay tuned - Ill be posting the rest of this very soon!")
 
-end
+
 
 # Blog.create(title:"image text23", body: "sdfafsafsjf;afjf
 
