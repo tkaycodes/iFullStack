@@ -243,5 +243,20 @@
 @tag5=Tag.create(name: "jQuery");
 
 
+@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag1.id, blog_id:1)
+
+@tagged_blogpost2=TaggedBlogpost.create(tag_id:@tag2.id, blog_id:5)
+@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag3.id, blog_id:5)
+@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag4.id, blog_id:5)
+@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag5.id, blog_id:5)
+
+@tagged_blogpost2=TaggedBlogpost.create(tag_id:@tag2.id, blog_id:6)
+@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag3.id, blog_id:6)
+@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag4.id, blog_id:6)
+@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag5.id, blog_id:6)
+
+
+
+
 
 
