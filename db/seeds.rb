@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# case Rails.env
-# when "development"
+case Rails.env
+  when "development"
 #     # Faker data
 
 #     # create 20 blogs
@@ -48,18 +48,18 @@
 
 # first blog post
 
-Blog.create(title: "Hello World", sub_heading: "Giving Back - or at least an attempt at doing so", body: "<p>As I continue to navigate the terrain of the web development world, one of the things that I have really loved is how a lot of the people associated with said world help each other.</p><p>How so?</p><p>By continuing to promote and contribute to the idea of open source. Incase you don’t know what this is – basically it means a model (or philosophy if you will) where an individuals product is available to everyone else. Within web development specifically, this usually takes the shape of individuals making their code freely available over the Internet. In this way others can view and learn from it. 
-</p><p>Even more specifically though, I have benefited tremendously when trying to learn new concepts, languages, frameworks etc. from blogging sites and tutorials, similar to the one I have created – as of today (yay!). As I have learned a lot from others within the web development world, I think it is only fair to give back – and share what I have learned. 
-</p><p>A lot of what I will share may be trivial to a lot of people, or may not be up to the standards of advanced programmers. For this reason I would appreciate any constructive criticism, and or comments about any of the things I post.
-</p><p>That being said, as a closing statement to henceforth begin a series of (hopefully) regular blog posts, I would like to say:
-</p><p>‘Hello World!’</p>")
+# Blog.create(title: "Hello World", sub_heading: "Giving Back - or at least an attempt at doing so", body: "<p>As I continue to navigate the terrain of the web development world, one of the things that I have really loved is how a lot of the people associated with said world help each other.</p><p>How so?</p><p>By continuing to promote and contribute to the idea of open source. Incase you don’t know what this is – basically it means a model (or philosophy if you will) where an individuals product is available to everyone else. Within web development specifically, this usually takes the shape of individuals making their code freely available over the Internet. In this way others can view and learn from it. 
+# </p><p>Even more specifically though, I have benefited tremendously when trying to learn new concepts, languages, frameworks etc. from blogging sites and tutorials, similar to the one I have created – as of today (yay!). As I have learned a lot from others within the web development world, I think it is only fair to give back – and share what I have learned. 
+# </p><p>A lot of what I will share may be trivial to a lot of people, or may not be up to the standards of advanced programmers. For this reason I would appreciate any constructive criticism, and or comments about any of the things I post.
+# </p><p>That being said, as a closing statement to henceforth begin a series of (hopefully) regular blog posts, I would like to say:
+# </p><p>‘Hello World!’</p>")
 
 
 #second post
 
 # Blog.create(title:"test123", sub_heading:"sapf", body: "checkwer")
 
-Blog.create(title:"Implementing Real-Time Search with Ruby-on-Rails", sub_heading: "PART 1 - Setup ('Scaffold + Faker + Bootstrap')", body:"<h3>Intro</h3>
+  Blog.create(title:"Implementing Real-Time Search with Ruby-on-Rails", sub_heading: "PART 1 - Setup ('Scaffold + Faker + Bootstrap')", body:"<h3>Intro</h3>
 
 So you generated a new rails scaffold. Now what ? Apart from the basic CRUD functionality - it seems a bit bare. Lets make it a little more exciting !
 
@@ -71,7 +71,7 @@ Now, here is a <a href=\"http://rails-real-time-search.herokuapp.com/\">live dem
 
 Enough talking, lets get to it!
 
-Oh, one more thing - The first part below will be pretty basic stuff, helping to get everything setup, you can skip all this stuff and go ahead to the next section <a href=\"/blogs/85\">here</a> if you want.
+Oh, one more thing - The first part below will be pretty basic stuff, helping to get everything setup, you can skip all this stuff and go ahead to the next section <a href=\"/blogs/3\">here</a> if you want.
 
 <h3> Create New Project / Generate Scaffold </h3>
 
@@ -137,10 +137,10 @@ $ rake db:seed
 </code>
 
 
-In your application, you should have a 20 books created for you. Maybe youll even get a good laugh (or two) from some of the stuff that was genrated - gotta love faker! 
+In your application, you should have a 20 books created for you. Maybe youll even get a good laugh (or two) from some of the stuff that was generated - gotta love faker! 
 
 
-<h3>Another Optional step - Adding <a href=\"http://getbootstrap.com/\">Bootstrap</a></h3> 
+<h3>Optional step: Adding <a href=\"http://getbootstrap.com/\">Bootstrap</a></h3> 
 
 Lets make our application look a little more pretty using bootstrap! Again, this part is optional - if your just here for the search, just move on to the next section.
 
@@ -171,7 +171,7 @@ Again, make sure to stop your server (control+c on mac) and re-start it again. Y
 
 Now lets get to coding!
 
-Inside your index.html.erb file, which should already contain about 30 lines of code (genrated by rails scaffold ) lets wrap eveything within a div having a class of container. This is a bootstrap class - which will put margins on the side of our book list and make everything more centered.
+Inside your index.html.erb file, which should already contain about 30 lines of code (generated by rails scaffold ) lets wrap eveything within a div having a class of container. This is a bootstrap class - which will put margins on the side of our book list and make everything more centered.
 
 Also add the bootstrap classes 'table', 'table-bordered', and 'table-striped' to your html table tag. 'table-bordered' and 'table-striped' are optional - but I personally like the way they make my tables look, but you dont have to add them if you like the look without. Play around with them, and pick a combination you like!
 
@@ -214,25 +214,23 @@ Your index file should look something like this:
 
 ```
 
-Also you should have this
-
-
-            <img src=\"/assets/id_added.png\" />
-
-Now that we have our scaffold looking nicer, and have test data we can work with, lets get to the fun stuff, and <a href=\"/blogs/85\">implement the search!</a>
+Now that we have our scaffold looking nicer, and have test data we can work with, lets get to the fun stuff, and <a href=\"/blogs/3\">implement the search!</a>
            
 <hr>
 If you have any questions, comments, or see any errors - please dont hesitate to leave a comment below!
 
 
-
 ")
 
-Blog.create(title:"image text23", body: "sdfafsafsjf;afjf
+Blog.create(title:"Implementing Real-Time Search with Ruby-on-Rails", sub_heading: "PART 2-Implementing the Search", body: "Stay tuned - Ill be posting the rest of this very soon!")
 
-<img src=\"/assets/html.png\" />
+end
 
-  ")
+# Blog.create(title:"image text23", body: "sdfafsafsjf;afjf
+
+# <img src=\"/assets/html.png\" />
+
+#   ")
 
 # #third post
 
