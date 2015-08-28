@@ -23,6 +23,7 @@ $(document).on('ready page:load', function(){
   $('#sidebaricon').click(function(){
     $(".wrapper").toggleClass('wrapperover');
     $(".sidebar").toggleClass('sidebarover');
+    $("#togglebutton").toggleClass('togglebuttonover');
     
      return false;
   });
