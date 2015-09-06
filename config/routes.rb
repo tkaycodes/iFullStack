@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/filter' => 'blogs#index'
   get '/filter/:tagid'=> 'blogs#index'
 
+  get '/password_checker' => 'static_pages#password_checker'
+
   # get '/blogs/filter' => 'blogs#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

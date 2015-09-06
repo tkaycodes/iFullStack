@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
-//= require_tree .
 
 $(document).on('ready page:load', function(){
 //stackoverflow.com/questions/18770517/rails-4-how-to-use-document-ready-with-turbo-links
