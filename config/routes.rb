@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get '/filter' => 'blogs#index'
   get '/filter/:tagid'=> 'blogs#index'
 
+
+  # STATIC PAGES
   get '/password_checker' => 'static_pages#password_checker'
+  get '/jukebox2.0'       => 'static_pages#jukebox_2'
+  get '/jukebox3.0'       => 'static_pages#jukebox_3'
 
   # get '/blogs/filter' => 'blogs#index'
 

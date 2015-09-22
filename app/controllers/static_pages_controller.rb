@@ -4,4 +4,11 @@ class StaticPagesController < ApplicationController
   def password_checker
     # render layout: 'static_pages'
   end
+
+  def jukebox_2
+  end
+
+
+  def jukebox_3
+  end
 end
