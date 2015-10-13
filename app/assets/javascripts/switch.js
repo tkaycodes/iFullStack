@@ -22,4 +22,5 @@ $('#bootstrap_state').on('switchChange.bootstrapSwitch', function(event, state){
 });
 
 
+
 });

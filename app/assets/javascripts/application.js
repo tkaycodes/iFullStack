@@ -18,7 +18,6 @@
 $(document).on('ready page:load', function(){
 //stackoverflow.com/questions/18770517/rails-4-how-to-use-document-ready-with-turbo-links
 
-
 // $(document).ready(function() {
   $('#sidebaricon').click(function(){
     $(".wrapper").toggleClass('wrapperover');
@@ -41,6 +40,23 @@ $('.logos').toggleClass('hideme');
 $('.logos').toggleClass('changecolor');
 $('.contactme').toggleClass('contactchange');
 $('.myname').toggleClass('namechange');
+});
+
+
+
+  // also toggling all tooltips here
+
+  $('[data-toggle="tooltip"]').tooltip();
+
+
+  // smooth scroll for clicking projects link
+
+
+$('#projectref').click(function(e){
+  e.preventDefault();
+  $('body, html').animate({
+    scrollTop: $('#mainproj_bottom').offset().top
+  },500);
 });
 
 });

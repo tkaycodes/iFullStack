@@ -1,6 +1,7 @@
 $(document).ready(function(){
   // console.log('hi');
 
+// alert('hi');
   // returns value of password field when the submit button is clicked
   $('input[type="button"]').click(function(){
     var password_value = $('input[type="text"][placeholder="Password"]').val();
