@@ -71,6 +71,13 @@ $('.myname').toggleClass('namechange');
 
   $('#projectref').click(function(e){
       e.preventDefault();
+
+      // close sidebar and make body scrollable
+      $(".wrapper").removeClass('wrapperover');
+      $(".sidebar").removeClass('sidebarover');
+      $("#togglebutton").removeClass('togglebuttonover');
+      $('body').removeClass('make-unscrollable');
+
       $('body, html').animate({
         scrollTop: $('#mainproj_bottom').offset().top
       },500);
