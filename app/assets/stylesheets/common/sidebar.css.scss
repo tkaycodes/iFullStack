@@ -1,0 +1,17 @@
+.sidebar li {  
+  text-decoration: none;
+  list-style: none;
+  padding: 25px 20px 40px 20px;
+  border-bottom: 2px solid gray;
+  font-size: 20px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.sidebar li:hover {  
+  text-decoration: none !important;
+}
+
+.sidebar a:hover {
+  text-decoration: none !important;
+}
