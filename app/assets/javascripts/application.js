@@ -14,17 +14,34 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require blogjs.js
+//= require newheader.js
+
 
 $(document).on('ready page:load', function(){
 //stackoverflow.com/questions/18770517/rails-4-how-to-use-document-ready-with-turbo-links
 
 // $(document).ready(function() {
   $('#sidebaricon').click(function(){
+
     $(".wrapper").toggleClass('wrapperover');
     $(".sidebar").toggleClass('sidebarover');
     $("#togglebutton").toggleClass('togglebuttonover');
+
+    // if sidebar out, cant scroll vertically
+    if ($('.wrapper').hasClass('wrapperover')) {
+      console.log("has class");
+      $('body').addClass('make-unscrollable');
+    }
+    else {
+      $('body').removeClass('make-unscrollable');
+    }
     
      return false;
+  });
+
+  $('.close-sidebar').click(function(){
+    $('#sidebaricon').click();
   });
 
   $(".mainpage").click(function(){
@@ -52,11 +69,22 @@ $('.myname').toggleClass('namechange');
   // smooth scroll for clicking projects link
 
 
-$('#projectref').click(function(e){
-  e.preventDefault();
-  $('body, html').animate({
-    scrollTop: $('#mainproj_bottom').offset().top
-  },500);
-});
+  $('#projectref').click(function(e){
+      e.preventDefault();
+      $('body, html').animate({
+        scrollTop: $('#mainproj_bottom').offset().top
+      },500);
+  });
+
+  $('div.right-arrow').hover(function(){
+      $('.blog-header-content').removeClass('hideme');
+    }, function(){
+      $('.blog-header-content').addClass('hideme');
+  });
+
 
 });
+
+
+
+
