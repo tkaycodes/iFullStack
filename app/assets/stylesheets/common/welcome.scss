@@ -24,18 +24,33 @@ body{
   
  }
 
-#sidebaricon{
+#sidebaricon {
   font-size: 45px;
-  color:white;
-  // float:right;
   margin-right: 10px;
   cursor: pointer;
-  background-color: #141F3D;
   width: 100%;
   padding-left: 15px;
+  display: inline;
 }
 
+#togglebutton {
+  border: 1px solid #BFC8CD;
+  color: #9EABB3;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
 
+#togglebutton:hover {
+  border: 1px solid black;
+  color: black;
+  transition: all 0.5s ease;
+}
 
 .hideme{
   visibility: hidden;
@@ -50,3 +65,34 @@ body{
 .image-responsive{
   height:100%;
 }
+
+div.right-arrow {
+    // tweaking
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+    // actual arrow
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid gray;
+}
+
+.blog-header-content {
+    display: inline-block;
+    width: -38px;
+    height: 175px;
+    vertical-align: middle;
+    border: 1px solid white;
+    margin-left: 11px;
+    float: right;
+    width: 580px;
+    position: absolute;
+    right: 30px;
+    top: 105px;
+}
+
+.hideme {
+  display: none;
+}
+
