@@ -59,6 +59,12 @@
   font-size: 80px;
 }
 
+.allblogslink {
+  font-family: Lato;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
 .headingandsubheading > h4 {
   font-weight: 100;
 }
@@ -104,6 +110,13 @@
   text-align:center;
   height:300px;
   padding-top:75px;
+}
+
+.filterappliedheading {
+  color: #337ab7;
+  position: absolute;
+  top: 240px;
+  text-transform: uppercase;
 }
 
 .headingandsubheading > h1 {

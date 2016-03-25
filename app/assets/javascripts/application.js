@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require blogjs.js
+//= require filterapplied.js
 //= require newheader.js
 
 

@@ -4,58 +4,28 @@
   </span>
 </div>
 
-<!-- <div class="container" style="padding-top:100px"> -->
   <div class="allblogs">
+    <!-- Show back button if filter applied -->
+    <% if params[:tagid].present? %>
+          <%= link_to "Back to all Blogs", blogs_path, 
+          class: 'allblogslink' %>
+    <% end %><hr>
+    <!-- all blogs -->
     <% @blogs.order("created_at DESC").each do |x| %>
       <%= link_to x, :style=>'text-decoration:none' do %>
           <div class="blog_main" style="margin-bottom:100px;">
-            
-            <div class="blogdate">
-              <%= x.created_at.strftime("%a, %B %d %Y") %>
-            </div>
-
-            <div class="headingandsubheading">
-              <h1><%= x.title %></h1>
-              <h4><%= x.sub_heading %></h4>
-            </div>
-
-
-            <div class="allblogtags">
-              TAGS:
-                  <% x.tags.each do |x| %>
-                      <%=link_to x.name, filter_path(tagid: x.id), class: 'blogtag' %>
-                  <% end %> 
-            </div>
-
-                  <!-- tags for each individual post -->
-                  <%#x.tags.each do |x|%>
-
-                  <%# if x.name === "Technical" %>
-                      <!-- <i class="fa fa-cogs" style="color:#337ab7"> -->
-                      <!-- <span style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif"> -->
-                      <!-- <%#=link_to x.name, filter_path(tagid: x.id)%></span> -->
-                      <!-- </i><span style="font-family:Lato;color:black">  Technical</span> -->
-                    <%# end %>
-                    <!-- <span style="background-color:#CCE0ED;padding:2px 2px 2px 2px;color:gray;font-size:12px;margin:0px 5px 0px 0px;"> -->
-                    <%#=link_to x.name, filter_path%>
-                    <%#=link_to x.name, filter_path(tagid: x.id)%>
-                    <!-- </span>        -->
-                    
-              <!-- </div>   -->
-
-            <!-- </div> -->
-            <%#end%>
-
-            <!-- <hr> -->
-            <!-- /individual blogpost -->
-      <%#end%>
-       <%#if params[:tagid].present?%>
-          <!-- <span style="padding-bottom:30px;"><%#=link_to "Back", blogs_path%></span> -->
-      <%#end%>
-  <!-- </div> -->
-  <!-- /allblogs -->
-
-
+              <div class="blogdate">
+                <%= x.created_at.strftime("%a, %B %d %Y") %>
+              </div>
+              <div class="headingandsubheading">
+                <h1><%= x.title %></h1>
+                <h4><%= x.sub_heading %></h4>
+              </div>
+              <div class="allblogtags">
+                TAGS:<% x.tags.each do |x| %>
+                      <%=link_to x.name, filter_path(tagid: x.id, tagname: x.name), class: 'blogtag' %>
+                     <% end %> 
+              </div>   
           </div>
       <% end %>
     <% end %>
