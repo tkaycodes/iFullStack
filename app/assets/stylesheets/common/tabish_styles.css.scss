@@ -7,32 +7,6 @@
   text-align: center;
   }
 
-.sidebar{
-  width:300px;
-  height:100%;
-  position:absolute;
-  background:  #141F3D;
-  color:white;
-  // left:-600px;
-  left:-300px;
-  // overflow: scroll;
-  top:0px;
-  transition: all 0.3s;
- }
-
-.aboutme{
-
-}
-
-.sidebar li{
-  padding-right:100px;
-  font-size:20px;
-}
-.sidebar li:hover{
-  padding-right:105px;
-  font-size:20px;
-}
-
 .padme{
   padding-left: 50px;
   padding-right: 50px;
@@ -116,12 +90,12 @@ width:300px;
     margin-right: 10px;
   }
 
-  .sidebar li{
-    text-decoration: none;
-    list-style: none;
-    padding: 40px 20px 40px 20px;
-    border-bottom: 1px solid gray;
-  }
+  // .sidebar li{
+  //   text-decoration: none;
+  //   list-style: none;
+  //   padding: 40px 20px 40px 20px;
+  //   border-bottom: 1px solid gray;
+  // }
 
   .sidebar ul{
     padding-left: 0px;
