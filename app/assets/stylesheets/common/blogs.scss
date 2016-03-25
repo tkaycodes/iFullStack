@@ -18,20 +18,62 @@
   font-size:15px;
 }
 
-.blog_post_body p{
+.blog_post_body p {
   margin-bottom: 20px;
 }
 
+.blogdate {
+  font-weight:100;
+  font-size: 20px;
+  padding-left: 20px;
+}
 
-.headingandsubheading{
-  border:1px solid;
+.headingandsubheading {
   padding-left:10px;
-  text-align: center;
+  padding-top:0px;
+  padding:20px;
+  color:black;
+  font-family: 'Indie Flower', cursive;
 }
 
-.headingandsubheading:hover{
-  box-shadow: inset 0 0 0 5px #3071A9;
+.allblogs {
+  margin-top: 80px;
 }
+
+.allblogtags {
+  padding-left: 20px;
+}
+
+.blogtag {
+  padding: 1px 5px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.blogtag:hover {
+  text-decoration: none;
+  border: 1px solid beige;
+}
+
+.headingandsubheading > h1 {
+  font-size: 80px;
+}
+
+.headingandsubheading > h4 {
+  font-weight: 100;
+}
+
+.blog_main {
+  padding-bottom: 20px;
+}
+
+.blog_main:hover {
+    box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+// .headingandsubheading:hover{
+//   box-shadow: inset 0 0 0 5px #3071A9;
+// }
 
 // FACE BOOK RECENT ARTICLES FEATURE
 .blog-sidebar {
@@ -39,14 +81,34 @@
   background: #E9EAED;
   position: fixed;
   top: 364px;
-  // navigation bar 64px + blog header 300px
   right: 0px;
   width: 255px;
+}
+
+#blog-heading {
+  font-size:96px;
+  vertical-align:middle;
+  letter-spacing:5px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:5px;
+  font-weight:100;
+  cursor:pointer
 }
 
 .change-display {
   top: 0px;
 } 
+
+.blog-header {
+  text-align:center;
+  height:300px;
+  padding-top:75px;
+}
+
+.headingandsubheading > h1 {
+  font-weight: 200;
+}
 
 .add-box-shadow {
   box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.3)
