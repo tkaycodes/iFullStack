@@ -7,6 +7,10 @@
   // background-color:gray;
 }
 
+// #blog-heading {
+//   box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.3)
+// }
+
 .blog_post_body{
   text-align:justify;
   letter-spacing: 1px;
@@ -27,4 +31,23 @@
 
 .headingandsubheading:hover{
   box-shadow: inset 0 0 0 5px #3071A9;
+}
+
+// FACE BOOK RECENT ARTICLES FEATURE
+.blog-sidebar {
+  height: 100%;
+  background: #E9EAED;
+  position: fixed;
+  top: 364px;
+  // navigation bar 64px + blog header 300px
+  right: 0px;
+  width: 255px;
+}
+
+.change-display {
+  top: 0px;
+} 
+
+.add-box-shadow {
+  box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.3)
 }

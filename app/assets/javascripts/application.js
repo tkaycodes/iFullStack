@@ -30,19 +30,23 @@ $(document).on('ready page:load', function(){
 
     // if sidebar out, cant scroll vertically
     if ($('.wrapper').hasClass('wrapperover')) {
-      console.log("has class");
+      // console.log("has class");
       $('body').addClass('make-unscrollable');
+      $('#togglebutton').text('X CLOSE');
+      $('.blog-header').removeClass('add-box-shadow');
     }
     else {
       $('body').removeClass('make-unscrollable');
+      $('#togglebutton').html('&#9776; MENU');
+      $('.blog-header').addClass('add-box-shadow');
     }
     
      return false;
   });
 
-  $('.close-sidebar').click(function(){
-    $('#sidebaricon').click();
-  });
+  // $('.close-sidebar').click(function(){
+  //   $('#sidebaricon').click();
+  // });
 
   $(".mainpage").click(function(){
     $(".wrapper").removeClass('wrapperover');
