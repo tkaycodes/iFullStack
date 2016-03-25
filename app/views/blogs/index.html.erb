@@ -37,21 +37,22 @@
         <%end%>
         <!-- ending the link block (for post_path) before tag div -->
               <div class="blog_tags" style="margin-bottom:10px">
+
                   <!-- tags for each individual post -->
                   <%x.tags.each do |x|%>
+                  
+                  <% if x.name === "Technical" %>
+                      <i class="fa fa-cogs" style="color:#337ab7">
+                      <span style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif">
+                      <%#=link_to x.name, filter_path(tagid: x.id)%></span>
+                      </i><span style="font-family:Lato;color:black">  Technical</span>
+                    <% end %>
                     <span style="background-color:#CCE0ED;padding:2px 2px 2px 2px;color:gray;font-size:12px;margin:0px 5px 0px 0px;">
                     <%#=link_to x.name, filter_path%>
                     <%=link_to x.name, filter_path(tagid: x.id)%>
-                    </span>
+                    </span>       
+                    
               </div>  
-                          
-              <% if x.name === "Technical" %>
-                <i class="fa fa-cogs" style="color:#337ab7">
-                <span style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif">
-                <%#=link_to x.name, filter_path(tagid: x.id)%></span>
-               
-               </i><span style="font-family:Lato;color:black">Technical</span>
-              <% end %>
 
             </div>
             <%end%>
