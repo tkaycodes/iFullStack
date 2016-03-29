@@ -43,7 +43,7 @@ class BlogsController < ApplicationController
 
   def authenticate 
     authenticate_or_request_with_http_basic do |username, password|
-      username == CONFIG["BLOG_USERNAME"] && password == CONFIG["BLOG_PASSWORD"]
+      username == ENV["BLOG_USERNAME"] && password == ENV["BLOG_PASSWORD"]
     end
   end
 
