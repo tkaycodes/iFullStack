@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_filter :authenticate, :only => :new
+
   def index
 
     # @technicalTag=Tag.find_by(name:"Technical");
@@ -36,7 +38,13 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :sub_heading)
+  end
+
+  def authenticate 
+    authenticate_or_request_with_http_basic do |username, password|
+      username == ENV["BLOG_USERNAME"] && password == ENV["BLOG_PASSWORD"]
+    end
   end
 
 end
