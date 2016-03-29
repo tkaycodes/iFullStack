@@ -1,0 +1,21 @@
+<%= form_for @blog, html: {class: "form-group"} do |b| %>
+    
+    <%= b.label :title %>
+    <%= b.text_field :title, class: "form-control" %>
+
+    <%= b.label :sub_heading %>
+    <%= b.text_field :sub_heading, class: "form-control" %>
+
+    <%= b.label :body %>
+    <%= b.text_area :body, class: "form-control custom_form" %>
+
+    <%= b.submit class: 'btn' %>
+
+<% end %>
+
+<style>
+  body textarea.custom_form {
+    height: 500px;
+  }
+
+</style>
