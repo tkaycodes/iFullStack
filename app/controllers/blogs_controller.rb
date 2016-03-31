@@ -16,8 +16,8 @@ class BlogsController < ApplicationController
   end
 
   def update
-    @blog = Blog.new(blog_params);
-    if @blog.save
+    @blog = Blog.find(params[:id]);
+    if @blog.update(blog_params)
       redirect_to @blog
     else 
       flash.now[:error] = "coudlnt save"
