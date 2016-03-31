@@ -9,6 +9,15 @@
 
 img {
   display: block;
+  max-width: 100%;
+}
+
+img[alt="DJ KHALED"] {
+  height: 190px;
+}
+
+img[alt="NBAHANDSHAKE"] {
+  width: 510px;
 }
 
 // #blog-heading {
