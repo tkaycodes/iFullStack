@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/filter' => 'blogs#index'
   get '/filter/:tagid/:tagname'=> 'blogs#index'
 
+  get '/projects' => 'projects#index'
 
   # STATIC PAGES
   get '/password_checker' => 'static_pages#password_checker'
