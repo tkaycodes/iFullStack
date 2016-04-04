@@ -9,7 +9,11 @@
     <%= b.label :body %>
     <%= b.text_area :body, class: "form-control custom_form" %>
 
-    <%= b.submit class: 'btn' %>
+    <%= b.label :tags %>
+    <%= b.select :tag_ids, Tag.all.collect {|x| [x.name, x.id]}, {}, 
+        :multiple => true %>
+
+    <%=b.submit%>
 
 <% end %>
 

@@ -3,7 +3,6 @@ class BlogsController < ApplicationController
 
   def index
     if params[:tagid].present?
-      # @blogs=Blog.all.where(id:21);
       @blogs = Blog.joins(:tags).where("tags.id=?", "#{params[:tagid]}")
       @currentfilter = Tag.find(params[:tagid]);
     else
@@ -34,7 +33,6 @@ class BlogsController < ApplicationController
   end
 
   def create
-    puts 'hello'
     @blog = Blog.new(blog_params)
       if @blog.save
         redirect_to @blog
@@ -47,7 +45,7 @@ class BlogsController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:title, :body, :sub_heading)
+    params.require(:blog).permit(:title, :body, :sub_heading, tag_ids: [])
   end
 
   def authenticate 
