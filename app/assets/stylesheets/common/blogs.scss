@@ -86,6 +86,7 @@ img[alt="NBAHANDSHAKE"] {
 
 .blog_main {
   padding-bottom: 20px;
+  position: relative;
 }
 
 .blog_main:hover {
@@ -104,17 +105,6 @@ img[alt="NBAHANDSHAKE"] {
   top: 364px;
   right: 0px;
   width: 255px;
-}
-
-#blog-heading {
-  font-size:96px;
-  vertical-align:middle;
-  letter-spacing:5px;
-  padding-left:10px;
-  padding-right:10px;
-  padding-bottom:5px;
-  font-weight:100;
-  cursor:pointer
 }
 
 .change-display {
@@ -140,4 +130,17 @@ img[alt="NBAHANDSHAKE"] {
 
 .add-box-shadow {
   box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.3)
+}
+
+.technical-post {
+  color:red;
+  margin: 0px auto;
+  text-align: center;
+  transform: rotate(-12deg);
+  border: 3px solid red;
+  display: inline-block;
+  margin: 10px 28px;
+  padding: 0px 5px;
+  font-family: Arial;
+  text-transform: uppercase;
 }

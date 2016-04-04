@@ -17,6 +17,7 @@
 //= require blogjs.js
 //= require apply-section-subheading.js
 //= require newheader.js
+//= require append-technical.js
 
 
 $(document).on('ready page:load', function(){
