@@ -58,9 +58,11 @@ img[alt="NBAHANDSHAKE"] {
 }
 
 .blogtag {
-  padding: 1px 5px;
   text-transform: uppercase;
-  font-weight: 100;
+  background: lightgray;
+  color: white;
+  padding: 3px 7px;
+  font-weight: bold;
 }
 
 .blogtag:hover {
