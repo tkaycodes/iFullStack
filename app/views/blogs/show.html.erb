@@ -28,7 +28,26 @@
       </div>
       <%=link_to "Back", blogs_path%>
       <hr>
-
+      
+      <div class="next-and-prev-container">
+        <div class="prev-container">
+          <%if @blog.previous.present?%>
+            <span class="button fa fa-angle-left"></span>
+            <%=link_to @blog.previous do %>
+              Previous Post<%#= @blog.previous.title %>
+            <%end%>
+          <%end%>
+        </div>
+        <div class="next-container">
+          <%if @blog.next.present?%>
+            <%=link_to @blog.next do %>
+            Next Post
+            <span class="button fa fa-angle-right"></span>
+            <%#= @blog.next.title %>
+            <%end%>
+          <%end%>
+        </div>
+      </div>
 
       <!-- diquss comments -->
       <div id="disqus_thread"></div>

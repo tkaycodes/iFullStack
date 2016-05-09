@@ -146,3 +146,12 @@ img[alt="NBAHANDSHAKE"] {
   font-family: Arial;
   text-transform: uppercase;
 }
+
+.next-and-prev-container {
+  text-align: center;
+}
+
+.next-container, 
+.prev-container {
+  display: inline-block;
+}

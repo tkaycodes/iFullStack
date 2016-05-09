@@ -7,4 +7,13 @@ class Blog < ActiveRecord::Base
     "#{id} #{title}".parameterize
   end
 
+  def next
+    Blog.where("id > ?", id).limit(1).first
+  end
+
+  def previous
+    # Blog.where("id < ?", id).limit(1).first
+    Blog.where("id < ?", id).last
+  end
+
 end
