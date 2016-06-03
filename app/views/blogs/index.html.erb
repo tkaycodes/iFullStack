@@ -15,7 +15,8 @@
       <%= link_to x, :style=>'text-decoration:none' do %>
           <div class="blog_main" style="margin-bottom:100px;">
               <div class="blogdate">
-                <%= x.created_at.strftime("%a, %B %d %Y") %>
+                <%#= x.created_at.strftime("%a, %B %d %Y") %>
+                <%= x.created_at.strftime("%B %Y") %></div>
               </div>
               <div class="headingandsubheading">
                 <h1><%= x.title %></h1>
