@@ -27,7 +27,7 @@
         <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, fenced_code_blocks: true).render(@blog.body).html_safe%>
         <%#=markdown.render("hello")%>
       </div>
-      <%=link_to "Back", blogs_path%>
+      <span class="back-to-all-blogs"><%=link_to "Back", blogs_path%></span>
       <hr>
       
       <div class="next-and-prev-container">
