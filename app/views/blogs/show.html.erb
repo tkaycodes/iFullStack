@@ -11,7 +11,7 @@
       </div>
       <div style="font-weight:200">
       <% if @blog.updated_at.strftime("%a %B %d %Y") != @blog.created_at.strftime("%a %B %d %Y") %>
-        <%= @blog.created_at.strftime("%a %B %d %Y") %></div>
+        <%= @blog.created_at.strftime("%B %Y") %></div>
         <span style="font-style:italic !important"> 
           Edited: <%= @blog.updated_at.strftime("%a %B %d %Y") %> 
         </span>
