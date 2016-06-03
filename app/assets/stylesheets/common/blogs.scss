@@ -148,7 +148,17 @@ img[alt="NBAHANDSHAKE"] {
 }
 
 .next-and-prev-container {
-  text-align: center;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.next-and-prev-container a {
+  text-decoration: none !important;
+}
+
+.next-and-prev-container a:hover {
+  font-weight: 400;
 }
 
 .next-container, 
