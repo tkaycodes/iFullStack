@@ -1,35 +1,75 @@
+<!-- BLOG SHOW PAGE -->
+
 <div class="container"> 
-
-<!--   <div class="col-sm-2">
-  </div> -->
-
+<hr>
 
   <div class="col-sm-12">
-      <div style="text-align:center;margin-bottom:30px;border:1px solid black;margin-top:5px;padding-bottom:15px;">
-        <h1 style="letter-spacing:2px;font-weight:100;font-size:50px;color:#141F3D"><%=@blog.title%></h1>
-        <h5 style="font-weight:200;word-spacing:3px;letter-spacing:1px;"><%=@blog.sub_heading%></h5>
+      
+      <!-- blog heading and subheading -->
+      <div class="blogheading-showpage">
+          <h1 style="letter-spacing:2px;font-size:50px;">
+            <%=@blog.title%>
+          </h1>
+          <h5 style="word-spacing:3px;letter-spacing:1px;">
+            <%= @blog.sub_heading %>
+          </h5>
       </div>
-      <div style="font-weight:200">
-      <% if @blog.updated_at.strftime("%a %B %d %Y") != @blog.created_at.strftime("%a %B %d %Y") %>
-        <%= @blog.created_at.strftime("%B %Y") %></div>
-        <span style="font-style:italic !important"> 
-          Edited: <%= @blog.updated_at.strftime("%a %B %d %Y") %> 
+  
+      <!-- blog date -->
+      <div class="blogdate-showpage">
+          <% if @blog.updated_at.strftime("%a %B %d %Y") != @blog.created_at.strftime("%a %B %d %Y") %>
+                This blog post was published in 
+                  <span class="blogdate-showpage-actual-date">
+                    <%= link_to @blog.created_at.strftime("%B %Y"), 
+                                blogs_path(:filterbydate => @blog.created_at.strftime("%B%Y"))%>
+                  </span>, 
+                <span style="font-style:italic !important"> 
+                and would later be edited in
+                  <span class="blogdate-showpage-actual-date">
+                    <%= link_to @blog.updated_at.strftime("%B %Y"), 
+                                blogs_path(:filterbydate => @blog.updated_at.strftime("%B%Y"))%>
+                  </span>
+              </span>
+          <% else %>
+              This blog post was published in 
+                  <span class="blogdate-showpage-actual-date">
+                    <%= link_to @blog.created_at.strftime("%B %Y"), 
+                                blogs_path(:filterbydate => @blog.created_at.strftime("%B%Y"))%>
+                  </span>
+          <% end %>
+      </div>
+
+
+      <!-- blog tags -->
+      <div>
+        <span style="font-weight:100;text-transform:uppercase">
+          Tagged Under: 
         </span>
-        <% else %>
-        <%=@blog.created_at.strftime("%B %Y")%></div><hr>
-         <%#= @blog.created_at.strftime("%a %B %d %Y") %></div>
-      <% end %>
-      <br><br><br>
-      <div class="blog_post_body">
-        <%#=simple_format(@blog.body)%>
-        <%#=simple_format(@blog.body, {}, :sanitize => false)%>
-        <%#=Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, fenced_code_blocks: true).render("fasj;sjlf;sajkfl;sjafl; saf1 ```<h1> safasfsa</h1> \<\%\= fsf \%\>``` fldskajflasf ").html_safe%>
-        <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, fenced_code_blocks: true).render(@blog.body).html_safe%>
-        <%#=markdown.render("hello")%>
+        <% @blog.tags.each do |x| %>
+
+          <span class="blogtag-show">
+            <%= link_to x.name, filter_path(:tagid => x.id, :tagname=> x.name) %>
+          </span>
+
+        <% end %>
       </div>
-      <span class="back-to-all-blogs"><%=link_to "Back to all blogs", blogs_path%></span>
+
+      <hr>  
+      
+      <!-- blog body -->
+      <div class="blog_post_body">
+        <%=Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, space_after_headers: true, fenced_code_blocks: true).render(@blog.body).html_safe%>
+      </div>
+
+
+      <!-- Footer -->
+      <span class="back-to-all-blogs">
+        <%=link_to "Back to all blogs", blogs_path%>
+      </span>
+
       <hr>
       
+      <!-- Next and previous links -->
       <div class="next-and-prev-container">
         <div class="prev-container">
           <%if @blog.previous.present?%>
@@ -77,6 +117,8 @@
 <!-- /container -->
 
 
+
+<!--  google analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -147,6 +147,79 @@ img[alt="NBAHANDSHAKE"] {
   text-transform: uppercase;
 }
 
+.back-to-all-blogs {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.back-to-all-blogs a {
+  text-decoration: none !important;
+}
+
+.next-container, 
+.prev-container {
+  display: inline-block;
+}
+
+// ===================
+// BLOG SHOW PAGE
+// ===================
+
+.blogheading-showpage {
+  text-align:center;
+  margin-bottom:30px;
+  border:1px solid #23527c;
+  margin-top:5px;
+  padding-bottom:15px;
+  color: #23527c;
+  font-weight: 900;
+}
+
+.blogdate-showpage {
+    font-weight: 100;
+    font-size: 24px;
+    font-color: blue;
+    color: #23527c;
+    margin-bottom: 20px;
+}
+
+.blogtag-show {
+    text-transform: uppercase;
+    color: white;
+    padding: 3px 7px;
+    font-weight: bold;
+    margin: 5px;
+    font-weight:100;
+}
+
+.blogdate-showpage-actual-date {
+  border-bottom: 1px solid #23527c;
+}
+
+.blogdate-showpage-actual-date:hover {
+  background: #23527c;
+  cursor: pointer;
+}
+
+.blogdate-showpage-actual-date a:hover {
+  color: white;
+}
+
+
+.blogtag-show a {
+  border-bottom: 1px solid #23527c;
+}
+
+.blogtag-show:hover {
+  background: #23527c;
+  cursor: pointer;
+}
+
+.blogtag-show:hover a {
+  text-decoration: none;
+  color: white;
+}
+
 .next-and-prev-container {
     text-align: center;
     font-size: 35px;
@@ -161,16 +234,3 @@ img[alt="NBAHANDSHAKE"] {
   font-weight: 400;
 }
 
-.back-to-all-blogs {
-  font-size: 23px;
-  font-weight: 400;
-}
-
-.back-to-all-blogs a {
-  text-decoration: none !important;
-}
-
-.next-container, 
-.prev-container {
-  display: inline-block;
-}
