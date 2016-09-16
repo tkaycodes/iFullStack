@@ -5,6 +5,9 @@ class BlogsController < ApplicationController
     if params[:tagid].present?
       @blogs = Blog.joins(:tags).where("tags.id=?", "#{params[:tagid]}")
       @currentfilter = Tag.find(params[:tagid]);
+    elsif params[:rubydate].present?
+      logger.warn "THE RUBY DATE IS#{params[:rubydate]}"
+      @blogs = Blog.all
     else
       @blogs = Blog.all
     end

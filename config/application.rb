@@ -7,7 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 if Rails.env.development?  
-    ENV.update YAML.load(File.read(File.expand_path('../application.yml', __Fs__)))
+    ENV.update YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
 end
 
 module Tabishkhan

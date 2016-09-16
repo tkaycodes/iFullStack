@@ -21,20 +21,32 @@
                 This blog post was published in 
                   <span class="blogdate-showpage-actual-date">
                     <%= link_to @blog.created_at.strftime("%B %Y"), 
-                                blogs_path(:filterbydate => @blog.created_at.strftime("%B%Y"))%>
+                        blogs_path(
+                          filterbydate: @blog.created_at.strftime("%B%Y"),
+                          rubydate: @blog.created_at
+                        ); 
+                    %>
                   </span>, 
                 <span style="font-style:italic !important"> 
                 and would later be edited in
                   <span class="blogdate-showpage-actual-date">
                     <%= link_to @blog.updated_at.strftime("%B %Y"), 
-                                blogs_path(:filterbydate => @blog.updated_at.strftime("%B%Y"))%>
+                        blogs_path(
+                          filterbydate: @blog.updated_at.strftime("%B%Y"),
+                          rubydate: @blog.updated_at
+                        );
+                    %>
                   </span>
               </span>
           <% else %>
               This blog post was published in 
                   <span class="blogdate-showpage-actual-date">
                     <%= link_to @blog.created_at.strftime("%B %Y"), 
-                                blogs_path(:filterbydate => @blog.created_at.strftime("%B%Y"))%>
+                        blogs_path(
+                          filterbydate: @blog.created_at.strftime("%B%Y"),
+                          rubydate: @blog.created_at
+                        );
+                    %>
                   </span>
           <% end %>
       </div>
