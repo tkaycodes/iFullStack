@@ -1,0 +1,95 @@
+// Place all the styles related to the tagged_blogposts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+
+    .heading {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .row {
+    
+        padding: 0 50px;
+        background: linear-gradient(to bottom, #f6f7fc 0%,#d5e1e8 40%);
+        
+        .left-side {
+
+            width: 50%;
+            float: left; 
+
+            .logo {
+
+                background: gray;
+                width: 280px;
+                height: 250px;
+                border-radius: 15px;
+
+            }
+
+        } 
+
+
+        .tagged_blog_posts {
+
+            width: 50%;
+            float: right;
+
+
+            .tag_list {
+
+                list-style: none;
+
+
+                .tag {
+
+                    border: 1px solid black;
+                    margin: 20px;
+                    padding: 10px;
+                    position: relative;
+
+                    .chevron {
+
+                        position: absolute;
+                        right: 20px;
+
+                        &:before {
+
+                            border-style: solid;
+                            border-width: 0.15em 0.15em 0 0;
+                            content: '';
+                            display: inline-block;
+                            height: 0.75em;
+                            left: 0.15em;
+                            position: relative;
+                            top: 0.25em;
+                            transform: rotate(-45deg);
+                            vertical-align: top;
+                            width: 0.75em;
+
+                        }
+
+                        &.right {
+
+                            &:before {
+
+                                left: 0;
+                                transform: rotate(45deg);
+
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        }
+    
+
+    }
+
+
+
+}

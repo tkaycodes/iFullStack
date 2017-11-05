@@ -5,7 +5,8 @@ class TaggedBlogpostsController < ApplicationController
   
   def index
 
-    # @taggedBlogPosts = TaggedBlogpost.all
+    @taggedBlogPosts = TaggedBlogpost.all
+    @tags = Tag.all
 
 
   end
