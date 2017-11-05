@@ -1,0 +1,2 @@
+module TaggedBlogpostsHelper
+end

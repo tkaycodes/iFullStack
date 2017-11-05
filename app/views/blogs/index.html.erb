@@ -1,7 +1,5 @@
 <div class="blog-header add-box-shadow">
-  <span id="section-heading">
-    blog
-  </span>
+  <%= render 'blogtagslist' %>
 </div>
 
   <div class="allblogs">
@@ -33,10 +31,10 @@
   </div>
 <!-- </div> -->
 
-  <!-- <div class="allblogs"> -->
-      <%#@blogs.order("created_at DESC").each do |x|%>
+<!--  <div class="allblogs"> -->
+    <!--   <%#@blogs.order("created_at DESC").each do |x|%>
         <%#=link_to x, :style=>'text-decoration:none' do%>
-            <!-- <div id="blog"> -->
+            <div id="blog">
              <!-- individual blogpost -->
                 <!-- <div class="blog_main" style="margin-bottom:20px;"> -->
                   <%#=x.created_at.strftime("%a, %B %d %Y")%>
@@ -50,12 +48,12 @@
               <!-- <div class="blog_tags" style="margin-bottom:10px"> -->
 
                   <!-- tags for each individual post -->
-                  <%#x.tags.each do |x|%>
+                  <%#@blogs.tags.each do |x|%>
 
                   <%# if x.name === "Technical" %>
                       <!-- <i class="fa fa-cogs" style="color:#337ab7"> -->
                       <!-- <span style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif"> -->
-                      <!-- <%#=link_to x.name, filter_path(tagid: x.id)%></span> -->
+                      <%#=link_to x.name, filter_path(tagid: x.id)%>
                       <!-- </i><span style="font-family:Lato;color:black">  Technical</span> -->
                     <%# end %>
                     <!-- <span style="background-color:#CCE0ED;padding:2px 2px 2px 2px;color:gray;font-size:12px;margin:0px 5px 0px 0px;"> -->
@@ -68,19 +66,19 @@
             <!-- </div> -->
             <%#end%>
 
-            <!-- <hr> -->
+           <!--   -->
             <!-- /individual blogpost -->
-      <%#end%>
+     <!--  <%#end%>
        <%#if params[:tagid].present?%>
-          <!-- <span style="padding-bottom:30px;"><%#=link_to "Back", blogs_path%></span> -->
+          <span style="padding-bottom:30px;"><%#=link_to "Back", blogs_path%></span>
       <%#end%>
-  <!-- </div> -->
+  </div>  -->
   <!-- /allblogs -->
 
 
- <!--  <div class="blog-sidebar">
+<!--   <div class="blog-sidebar">
 
-  </div> -->
+  </div>  -->
 
 
 
