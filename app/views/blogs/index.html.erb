@@ -5,9 +5,22 @@
   <div class="allblogs">
     <!-- Show back button if filter applied -->
     <% if params[:tagid].present? %>
-          <%= link_to "Back to all Blogs", blogs_path, 
-          class: 'allblogslink' %>
-    <% end %><hr>
+
+          <div class="back-nav">
+            <div class="links">
+              <div class="link">
+                <div class="chevron left"></div>
+                <%= link_to "Back to all blogs", blogs_path%>
+              </div>
+              <div class="link">
+                <div class="chevron left"></div>
+                <a href="/allblogposts" style="display:block">Blog Categories</a>
+              </div>
+            </div>
+          </div>
+        
+    <% end %>
+    <hr>
     <!-- all blogs -->
     <% @blogs.order("created_at DESC").each do |x| %>
       <%= link_to x, :style=>'text-decoration:none' do %>
