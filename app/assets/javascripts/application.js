@@ -71,24 +71,6 @@ $('.myname').toggleClass('namechange');
 
   $('[data-toggle="tooltip"]').tooltip();
 
-
-  // smooth scroll for clicking projects link
-
-
-  $('#projectref').click(function(e){
-      e.preventDefault();
-
-      // close sidebar and make body scrollable
-      $(".wrapper").removeClass('wrapperover');
-      $(".sidebar").removeClass('sidebarover');
-      $("#togglebutton").removeClass('togglebuttonover');
-      $('body').removeClass('make-unscrollable');
-
-      $('body, html').animate({
-        scrollTop: $('#mainproj_bottom').offset().top
-      },500);
-  });
-
   $('div.right-arrow').hover(function(){
       $('.blog-header-content').removeClass('hideme');
     }, function(){

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # BLOG
   # get '/blog'         => 'static_pages#blog'
 
+  get '/allblogposts' => 'tagged_blogposts#index'
+
   # ================
   # PRODUCTION BLOG
   # ================

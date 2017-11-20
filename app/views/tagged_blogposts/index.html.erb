@@ -1,0 +1,32 @@
+<div class="heading">Categories</div>
+
+<div class="row">
+
+  <div class="left-side">
+      
+      <!-- <div class="logo"></div> -->
+      <img src="https://i.imgur.com/SbZxZA8.jpg" height="70%" width="70%">
+
+
+  </div>
+
+  <div class="tagged_blog_posts right-side">
+
+    <ul class="tag_list">
+
+      <% @tags.each do |tag| %>
+        
+        <li class="tag">
+
+            <a href="/filter?tagid=<%=tag.id %>&tagname=<%=tag.name%>">
+              <%= tag.name %>
+              <span class="chevron right"></span>
+            </a>
+
+          </li>
+
+      <% end %>
+    </ul>
+
+  </div>
+</div>
