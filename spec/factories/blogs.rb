@@ -1,4 +1,4 @@
-FactoryGirl.define do 
+FactoryBot.define do 
   factory :blog do |b|
     b.title { Faker::Name.title}
     b.body  { Faker::Lorem.paragraph}

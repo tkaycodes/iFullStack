@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-
-gem 'rails', '4.2.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '>= 5.0.0.rc2', '< 5.1'
+# gem 'rails', '4.2.0' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'pg' # Use postgresql as the database for Active Record
 gem 'sass-rails', '~> 5.0'# Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0'# Use Uglifier as compressor for JavaScript assets
@@ -16,6 +16,8 @@ gem "font-awesome-rails"
 gem 'faker'
 gem 'hirb'
 gem 'redcarpet'
+gem 'webpacker'
+gem 'react-rails'
 
 
 group :production do 
@@ -27,6 +29,6 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
 end
 
