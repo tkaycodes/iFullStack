@@ -51,7 +51,7 @@
 # </p><p>Even more specifically though, I have benefited tremendously when trying to learn new concepts, languages, frameworks etc. from blogging sites and tutorials, similar to the one I have created – as of today (yay!). As I have learned a lot from others within the web development world, I think it is only fair to give back – and share what I have learned. 
 # </p><p>A lot of what I will share may be trivial to a lot of people, or may not be up to the standards of advanced programmers. For this reason I would appreciate any constructive criticism, and or comments about any of the things I post.
 # </p><p>That being said, as a closing statement to henceforth begin a series of (hopefully) regular blog posts, I would like to say:
-# </p><p>‘Hello World!’</p>")
+# </p><p>‘Hello World!’</p>");
 
 
 #second post
@@ -235,6 +235,15 @@
 
 # Blog.create(title:"Implementing Real-Time Search with Ruby-on-Rails", sub_heading: "PART 2 - Search ", body:" ");
 
+20.times do 
+  Blog.create(title: Faker::Name.title, sub_heading: Faker::Company.bs, body: Faker::Lorem.paragraph);
+end
+
+40.times do 
+  Tag.create(name: Faker::Commerce.department);
+end
+
+# NEED TO CREATE FOR EACH BLOG RANDOM TAG AS WELL 
 
 # genereal
 @tag1=Tag.find_by(name:"General")
@@ -251,20 +260,28 @@
 #jQuery
 @tag5=Tag.find_by(name:"jQuery");
 
+Blog.all.each do |blog|
+  rand(1..8).times do
+    TaggedBlogpost.create(tag_id:  Tag.order("RANDOM()").first.id, blog_id: blog.id);
+  end
+end
 
 
 
-@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag1.id, blog_id:1)
 
-@tagged_blogpost2=TaggedBlogpost.create(tag_id:@tag2.id, blog_id:5)
-@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag3.id, blog_id:5)
-@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag4.id, blog_id:5)
-@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag5.id, blog_id:5)
 
-@tagged_blogpost2=TaggedBlogpost.create(tag_id:@tag2.id, blog_id:6)
-@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag3.id, blog_id:6)
-@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag4.id, blog_id:6)
-@tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag5.id, blog_id:6)
+
+# @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag1.id, blog_id:1)
+
+# @tagged_blogpost2=TaggedBlogpost.create(tag_id:@tag2.id, blog_id:5)
+# @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag3.id, blog_id:5)
+# @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag4.id, blog_id:5)
+# @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag5.id, blog_id:5)
+
+# @tagged_blogpost2=TaggedBlogpost.create(tag_id:@tag2.id, blog_id:6)
+# @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag3.id, blog_id:6)
+# @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag4.id, blog_id:6)
+# @tagged_blogpost1=TaggedBlogpost.create(tag_id:@tag5.id, blog_id:6)
 
 
 
